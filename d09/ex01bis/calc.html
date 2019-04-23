@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+	<head>
+		<title>calc.html</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+	<body style="background-color:lightblue;">
+		<input type="text" id="left"></input>
+		<select id="select">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" id="right"></input>
+		<input type="submit" id="calculate" value="Try me!"></input>
+		<script>
+			function doTheMath() {
+				a = parseFloat($('#left').val()); //parseFloat parses stirng to find number.
+				b = parseFloat($('#right').val());
+
+
+				if ($('select').val() == '+') //add
+				{
+					console.log(a + b);
+					alert(a + b);
+					return ;
+				}
+				if ($('select').val() == '-') //subtract
+				{
+					console.log(a - b);
+					alert(a - b);
+					return ;
+				}
+				if ($('select').val() == '*') //multiply.
+				{
+					console.log(a * b);
+					alert(a * b);
+					return ;
+				}
+				if ($('select').val() == '%') //mod
+				{
+					if (a == 0  && b == 0)
+					{
+						//calculate = a % b;
+						console.log(a % b);
+						alert("It's Over 9000!")
+						console.log("It's Over 9000!");
+					}
+					if (a == 0 && b > 0)
+					{
+					//	calculate = a % b;
+						console.log(a % b);
+						alert("It's Over 9000!")
+						console.log("It's Over 9000!");
+					}
+					if (a > 0 && b == 0)
+					{
+					//	calculate = a % b;
+						console.log(a % b);
+						alert("It's Over 9000!")
+						console.log("It's Over 9000!");
+					}
+					if (a > 0 && b > 0)
+					{
+						console.log(a % b);
+						alert(a % b);
+					}
+
+				}
+				if ($('select').val() == '/')
+				{
+					if (a == 0 && b == 0 )
+					{
+						calculate = a / b;
+						console.log(calculate);
+						alert("It's Over 9000!")
+						console.log("It's Over 9000!");
+					}
+					if (a == 0 && b > 0)
+					{
+						calculate = a / b;
+						console.log(calculate);
+						alert("It's Over 9000!")
+						console.log("It's Over 9000!");
+					}
+					if (a > 0 && b == 0)
+					{
+						calculate = a / b;
+						console.log(calculate);
+						alert("It's Over 9000!")
+						console.log("It's Over 9000!");
+					}
+					if (a > 0 && b > 0)
+					{
+						calculate = a / b;
+						console.log(calculate);
+						alert(calculate);
+					}	
+				}
+			}
+
+			//.ready checks if page is ready to be used.
+			$(document).ready(function() {
+				setInterval(function() { alert("Please, use me..."); }, 30000); 
+			$('#calculate').click(function() {
+				first = ($('#left').val());
+				sec = ($('#right').val());
+
+				if (first == "" || sec == "")
+				{
+					alert('Error :(');
+					return ;
+				}
+
+				if (first >= 0 && sec >= 0)
+					doTheMath();
+				else
+				{
+					alert('Error :(');
+					return ;
+				}
+			});
+			
+			});
+			
+		</script>
+	</body>
+
+	<!--run     python -m SimpleHTTPServer 8004   -->
+</html>

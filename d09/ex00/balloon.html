@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+		<style>
+			.tops{
+				padding-top: 240px;
+			}
+			#balloon {
+				border-radius: 50%;
+				background-color : red;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	<body>
+		<center>
+		<div class="tops"></div>
+		<div id="balloon" onclick="bigger()"; onmouseleave="smaller()";></div>
+		</center>
+<script>
+function bigger()
+{
+	var height =  balloon.clientHeight;
+	var grabcolor = balloon.style.background;
+	var new_height = height + 10; 
+	new_height > 420 ? new_height = "200" : 0;
+	if (grabcolor == "green")
+		grabcolor = "blue";
+	else if (grabcolor == "blue")
+		grabcolor = "red";
+	else
+		grabcolor = "green";
+	balloon.style.height = new_height + "px";
+	balloon.style.width = new_height + "px";
+	balloon.style.background = grabcolor;
+}		
+function smaller()
+{
+	var height =  balloon.clientHeight;
+	var color = balloon.style.background;
+	var new_height = height - 5;
+	height == 200 ? new_height = "200" : 0;
+	color == "green" ? color = "red" : 0;
+	color == "blue" ? color = "green" : 0;
+	color == "red" ? color = "blue" : 0;
+	balloon.style.height = new_height + "px";
+	balloon.style.width = new_height + "px";
+	balloon.style.background = color;
+}
+</script>
+	</body>
+</html>

@@ -1,0 +1,131 @@
+</!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="This is am exam">
+		<meta name=viewport content="width=device-width, initial">
+
+		<title></title>
+	</head>
+<body style="background-color:lightblue;">
+
+<center>
+	<form>
+		Value 1: <input type="text" id="value1">
+		value 2: <input type="text" id="value2">
+		Operator:
+		<select id="operator">
+			<option value="add">Add</option>
+			<option value="min">Minus</option>
+			<option value="div">Divide</option>
+			<option value="mul">Multiply</option>
+			<option value="mod">Modulus</option>
+		</select>
+		<button type="button" onclick="calc()" value="try me">Try me</button>
+
+	</form>
+</center>
+</body>
+</html>
+
+<script type="text/javascript">
+	setInterval(function(){ alert("Please, use me..."); }, 30000);
+
+function calc(){
+	var a = parseInt(document.querySelector("#value1").value);
+	var b = parseInt(document.querySelector("#value2").value);
+	var op = document.querySelector("#operator").value;
+	var calculate;
+
+
+
+	if (a < 0 || b < 0)
+	{
+		alert('Error :(')
+		return ;
+
+	}
+	if (op == "add" || op == "min" || op == "mul")
+	{
+		if (a >= 0 && b >= 0)
+		{
+			if (op == "add") {
+				calculate = a + b;
+			} else if (op == "min"){
+				calculate = a - b;
+			} else if (op == "mul"){
+				calculate = a * b;
+			}
+		console.log(calculate);
+		alert(calculate);
+		}
+	} 
+	if (op == "mod")
+	{
+		if (a >= 0 && b >= 0)
+		{
+			if (a == 0 && b == 0 )
+			{
+				calculate = a % b;
+				console.log(calculate);
+				alert("It's Over 9000!")
+				console.log("It's Over 9000!");
+			}
+			if (a == 0 && b > 0)
+			{
+				calculate = a % b;
+				console.log(calculate);
+				alert("It's Over 9000!")
+				console.log("It's Over 9000!");
+			}
+			if (a > 0 && b == 0)
+			{
+				calculate = a % b;
+				console.log(calculate);
+				alert("It's Over 9000!")
+				console.log("It's Over 9000!");
+			}
+			if (a > 0 && b > 0)
+			{
+				calculate = a % b;
+				console.log(calculate);
+				alert(calculate);
+			}
+		}
+	}
+	if (op == "div")
+	{
+		if (a >= 0 && b >= 0)
+		{
+			if (a == 0 && b == 0 )
+			{
+				calculate = a / b;
+				console.log(calculate);
+				alert("It's Over 9000!")
+				console.log("It's Over 9000!");
+			}
+			if (a == 0 && b > 0)
+			{
+				calculate = a / b;
+				console.log(calculate);
+				alert("It's Over 9000!")
+				console.log("It's Over 9000!");
+			}
+			if (a > 0 && b == 0)
+			{
+				calculate = a / b;
+				console.log(calculate);
+				alert("It's Over 9000!")
+				console.log("It's Over 9000!");
+			}
+			if (a > 0 && b > 0)
+			{
+				calculate = a / b;
+				console.log(a / b);
+				alert(a/b);
+			}
+		}
+	}
+
+}
+</script>
