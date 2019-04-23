@@ -1,0 +1,52 @@
+body {
+  padding: 20px 50px 150px;
+  font-size: 13px;
+  text-align: center;
+  background: url(https://static1.squarespace.com/static/592439cc9f7456571bfce32a/592456c49de4bb0ca603b9b2/594d2aa229687feedffa2ee1/1536941717164/Keto+Cuban+Sliders-4.jpg?format=2500w);
+}
+
+ul {
+  text-align: left;
+  display: inline;
+  padding: 120px 20px 17px 0;
+}
+
+ul li:hover {
+  background: #500;
+  color: white;
+}
+
+ul li {
+  display: inline;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+}
+
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  box-shadow: 5px 20px #888888;
+  opacity: 0;
+  visibility: hidden;
+}
+
+ul li ul li { 
+  background: black; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+
+ul li ul li:hover {
+  background: white;
+}
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
